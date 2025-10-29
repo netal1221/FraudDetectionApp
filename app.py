@@ -1,5 +1,5 @@
 # ===========================================================
-# 💳 CREDIT CARD FRAUD DETECTION — FINAL FIXED APP (Netal)
+# 💳 CREDIT CARD FRAUD DETECTION — FINAL APP (Netal)
 # ===========================================================
 import streamlit as st
 import pandas as pd
@@ -8,7 +8,7 @@ import joblib
 import os
 import gdown
 
-# -----------------------------------------------------------
+# ---------------------------------------------------------C:\Users\Admin\Desktop\FraudDetectionApp--
 # ⚙️ PAGE CONFIGURATION
 # -----------------------------------------------------------
 st.set_page_config(page_title="Credit Card Fraud Detection", page_icon="💳", layout="wide")
@@ -54,7 +54,7 @@ section.main > div:has(> div.block-container) {padding-top: 70px !important;}
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     animation: fadeIn 0.8s ease-in;
 }
-@keyframes fadeIn {from {opacity: 0; transform: translateY(15px);} to {opacity: 1; transform: translateY(0);}}
+@keyframes fadeIn {from {opacity: 0; transform: translateY(15px);} to {opacity: 1; transform: translateY(0);} }
 .stButton>button {
     background-color: #004b8d;
     color: white;
@@ -73,7 +73,6 @@ section.main > div:has(> div.block-container) {padding-top: 70px !important;}
 # -----------------------------------------------------------
 drive_files = {
     "creditcard.csv": "1LAADBVYqcf4Isjln32bN6_tXeYfluXHh",
-    # model and scaler file-IDs (replace if yours differ)
     "fraud_model.pkl": "1fnad3ZFIUvFYe3AeK4eYUPV06vLk26Rm",
     "scaler.pkl": "1RlOHjYxuBRNCOnCbtd4fkmsuJMf93ZyK"
 }
@@ -135,11 +134,11 @@ if page == "home":
     Detect and prevent fraudulent credit card transactions using **Machine Learning**.
 
     ### ⚙️ Tech Stack
-    - Python
-    - Streamlit
-    - Scikit-learn
-    - Random Forest
-    - Pandas, NumPy
+    - Python  
+    - Streamlit  
+    - Scikit-learn  
+    - Random Forest  
+    - Pandas, NumPy  
 
     ### 🚀 How to Use
     👉 Go to the **Predict** page to test your own transactions.
@@ -223,7 +222,6 @@ elif page == "predict":
                     st.success("✅ Legitimate Transaction.")
             else:
                 st.warning("⚠️ Model not found. Use demo mode or upload .pkl files.")
-
     st.markdown('</div>', unsafe_allow_html=True)
 
 # -----------------------------------------------------------
@@ -244,4 +242,30 @@ elif page == "chat":
         else:
             st.info("This project identifies suspicious credit card transactions.")
     st.markdown('</div>', unsafe_allow_html=True)
+
+# -----------------------------------------------------------
+# ℹ️ ABOUT PAGE (Fixed)
+# -----------------------------------------------------------
+elif page == "about":
+    st.markdown('<div class="main-box">', unsafe_allow_html=True)
+    st.header("ℹ️ About the Project")
+
+    st.write("""
+   
+    ### 🧠 Project Highlights:
+    - Real-time fraud prediction using Random Forest  
+    - Automatic dataset loading from Google Drive  
+    - Multi-page UI: Dataset, Prediction, Chatbot, About  
+    - Deployed on **Streamlit Cloud**
+
+    ### 🛠️ Tech Stack:
+    - **Frontend:** Streamlit  
+    - **Backend:** Python, Scikit-learn  
+    - **Dataset:** Credit Card Transactions (Kaggle)  
+    - **Deployment:** Streamlit Cloud  
+
+    ---
+    """)
+  
+
 
