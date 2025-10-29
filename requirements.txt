@@ -1,15 +1,9 @@
-<<<<<<< HEAD
 streamlit
 pandas
 numpy
 scikit-learn
-xgboost
 matplotlib
-=======
-streamlit
-pandas
-numpy
-scikit-learn
-xgboost
-matplotlib
->>>>>>> e9f6cc12ecd478e0419c17a7039f4c7289774f6a
+seaborn
+joblib
+requests
+
